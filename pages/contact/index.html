@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Aether</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="../../components/Header/styles.css">
+  <link rel="stylesheet" href="../../components/Button/styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="main-content">
+    <section class="section">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <form id="contact-form">
+          <div class="form-group"><label for="name">Name</label><input type="text" id="name" required></div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" required></div>
+          <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" required></div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" required></textarea></div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <div id="form-feedback" class="form-feedback"></div>
+      </div>
+    </section>
+  </main>
+  <script src="../../components/utils.js"></script>
+</body>
+</html>

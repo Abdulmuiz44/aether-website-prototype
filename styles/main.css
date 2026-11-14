@@ -1,0 +1,24 @@
+/* Global Design System for Aether */
+:root {
+  --primary: #6c5ce7;
+  --secondary: #a29bfe;
+  --text: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --bg: #121212;
+  --bg-elevated: #1a1a1a;
+  --card-bg: #1e1e1e;
+  --border: #333;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', var(--font-sans);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 5rem 0; }
+footer { background: var(--bg-elevated); border-top: 1px solid var(--border); padding: 3rem 0 1.5rem; margin-top: auto; }
+.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+@media (max-width: 768px) { .section { padding: 3rem 0; } }

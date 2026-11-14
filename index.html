@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aether — Illuminate Your Ideas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./components/Header/styles.css">
+  <link rel="stylesheet" href="./components/Button/styles.css">
+  <link rel="stylesheet" href="./components/Card3D/styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="main-content" id="page-content"></main>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Aether</h3>
+          <p class="text-muted">Intelligent tools for creators and builders.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="./index.html" data-nav="home">Home</a></li>
+            <li><a href="./pages/about/index.html" data-nav="about">About</a></li>
+            <li><a href="./pages/contact/index.html" data-nav="contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aether. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./components/utils.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const contentEl = document.getElementById('page-content');
+      try {
+        const res = await fetch('./pages/home/content.html');
+        const html = await res.text();
+        contentEl.innerHTML = html;
+        if (typeof Aether !== 'undefined') Aether.fixNavigationPaths();
+      } catch (e) { console.error(e); }
+    });
+  </script>
+</body>
+</html>
